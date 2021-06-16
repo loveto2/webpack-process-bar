@@ -9,7 +9,7 @@ const {
   appendWebpackPlugin
 } = require('@rescripts/utilities')
 
-const Webpackbar = require('webpackbar')
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const resolve = dir => path.join(__dirname, dir)
 
@@ -130,7 +130,7 @@ const lessConfig = config => {
 
 const processBarConfig = config => {
   return appendWebpackPlugin(
-    new Webpackbar(),
+    new DashboardPlugin(),
     config
   )
 }

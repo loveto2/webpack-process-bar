@@ -26,8 +26,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "rescripts start",
-    "build": "rescripts build",
+    "start": "webpack-dashboard -- rescripts start",
+    "build": "webpack-dashboard -- rescripts build",
     "test": "rescripts test",
     "eject": "react-scripts eject"
   },
@@ -60,6 +60,6 @@
     "less": "2.7.2",
     "less-loader": "5.0",
     "rescript-use-antd": "^0.0.1",
-    "webpackbar": "^5.0.0-3"
+    "webpack-dashboard": "^3.3.3"
   }
 }
