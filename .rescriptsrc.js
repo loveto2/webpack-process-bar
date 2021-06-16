@@ -5,8 +5,11 @@ const {
 const theme = require('./theme');
 const {
   getPaths,
-  edit
+  edit,
+  appendWebpackPlugin
 } = require('@rescripts/utilities')
+
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 const resolve = dir => path.join(__dirname, dir)
 
@@ -124,7 +127,16 @@ const lessConfig = config => {
 
   return config
 }
+
+const processBarConfig = config => {
+  return appendWebpackPlugin(
+    new ProgressBarPlugin(),
+    config
+  )
+}
+
 module.exports = [
   lessConfig,
-  webpackConfig
+  webpackConfig,
+  processBarConfig
 ]

@@ -59,6 +59,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "less": "2.7.2",
     "less-loader": "5.0",
+    "progress-bar-webpack-plugin": "^2.1.0",
     "rescript-use-antd": "^0.0.1"
   }
 }
