@@ -10,6 +10,7 @@ const {
 } = require('@rescripts/utilities')
 
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin')
 
 const resolve = dir => path.join(__dirname, dir)
 
@@ -129,10 +130,14 @@ const lessConfig = config => {
 }
 
 const processBarConfig = config => {
-  return appendWebpackPlugin(
+  const edited = appendWebpackPlugin(
     new ProgressBarPlugin(),
     config
-  )
+    )
+    return appendWebpackPlugin(
+      new SpeedMeasurePlugin(),
+      edited
+    )
 }
 
 module.exports = [
