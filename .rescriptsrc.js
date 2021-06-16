@@ -9,7 +9,7 @@ const {
   appendWebpackPlugin
 } = require('@rescripts/utilities')
 
-const webpack = require('webpack')
+const Webpackbar = require('webpackbar')
 
 const resolve = dir => path.join(__dirname, dir)
 
@@ -130,7 +130,7 @@ const lessConfig = config => {
 
 const processBarConfig = config => {
   return appendWebpackPlugin(
-    new webpack.ProgressPlugin(),
+    new Webpackbar(),
     config
   )
 }
